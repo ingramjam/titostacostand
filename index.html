@@ -78,10 +78,10 @@
 
         .tv-scene-container .video-embed {
             position: absolute;
-            top: 21.3%;
-            left: 29.1%;
-            width: 42.2%;
-            height: 56.5%; 
+            top: 21.4%;
+            left: 29.2%;
+            width: 42%;
+            height: 56.2%; 
             overflow: hidden;
         }
 
@@ -117,32 +117,15 @@
             z-index: 5; /* Ensure it's on top */
         }
         
-        /* --- Simplified Sticky Header --- */
-        #main-header {
-            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, padding 0.3s ease-in-out;
-        }
-        #logo {
-            transition: width 0.3s ease-in-out;
-        }
-        #main-header.scrolled {
-            background-color: rgba(243, 239, 234, 0.9);
-            backdrop-filter: blur(5px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-        }
-        #main-header.scrolled #logo {
-            width: 100px;
-        }
     </style>
 </head>
 <body class="text-black">
 
-    <!-- Header --><header id="main-header" class="sticky top-0 z-50">
+    <!-- Header --><header class="absolute top-0 left-0 right-0 z-50">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-center">
                 <a href="#">
-                    <img id="logo" src="https://static.wixstatic.com/media/43bd37_09f2574505d74b639db181895d6f7d99~mv2.png" alt="Tito's Taco Stand Logo" class="w-[250px] h-auto drop-shadow-lg">
+                    <img src="https://static.wixstatic.com/media/43bd37_09f2574505d74b639db181895d6f7d99~mv2.png" alt="Tito's Taco Stand Logo" class="w-[250px] h-auto drop-shadow-lg">
                 </a>
             </div>
         </div>
@@ -265,17 +248,6 @@
     <!-- Sticky Full Menu Button --><a href="menu.html" class="fixed bottom-5 right-5 z-50 font-brand bg-yellow-400 text-black py-3 px-6 rounded-md border-4 border-black hover:bg-yellow-500 transition-colors shadow-lg transform hover:scale-105">
         Full Menu
     </a>
-
-    <!-- JavaScript for Sticky Header --><script>
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('main-header');
-            if (window.scrollY > 10) { // Add scrolled class after scrolling 10px
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
 
 </body>
 </html>
