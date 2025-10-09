@@ -34,49 +34,6 @@
         .menu-item-title {
             font-family: 'Permanent Marker', cursive;
         }
-        /* Boombox Styles */
-        .boombox {
-            background-color: #4a4a4a;
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: 10px 10px 15px rgba(0,0,0,0.5), inset 0 0 10px rgba(0,0,0,0.5);
-            border: 4px solid #222;
-            max-width: 800px;
-            margin: auto;
-        }
-        .boombox-handle {
-            height: 40px;
-            width: 40%;
-            background-color: #333;
-            margin: -40px auto 20px auto;
-            border-radius: 20px 20px 0 0;
-            border: 4px solid #222;
-            border-bottom: none;
-            box-shadow: inset 0 6px 10px rgba(0,0,0,0.4);
-        }
-        .boombox-body {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .speaker {
-            flex: 1;
-            height: 150px;
-            background: radial-gradient(circle, #222 40%, #111 80%);
-            border-radius: 50%;
-            border: 10px solid #4a4a4a;
-            box-shadow: inset 0 0 10px black;
-        }
-        .cassette-deck {
-            flex: 2;
-            background-color: #222;
-            padding: 10px;
-            border-radius: 10px;
-            border: 2px solid #555;
-        }
     </style>
 </head>
 <body class="text-black">
@@ -199,28 +156,13 @@
                     </div>
                 </div>
             </div>
+
         </div>
+
     </main>
-    
-    <!-- Sounds Section -->
-    <section class="py-12 md:py-24">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="font-brand text-6xl md:text-8xl mb-12">THE SOUNDS</h2>
-            <div class="boombox">
-                <div class="boombox-handle"></div>
-                <div class="boombox-body">
-                    <div class="speaker"></div>
-                    <div class="cassette-deck">
-                        <iframe data-testid="embed-iframe" style="border-radius:12px; width: 100%;" src="https://open.spotify.com/embed/playlist/62ut8Ysx2yOz69R0sYe8el?utm_source=generator" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                    <div class="speaker"></div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
-    <footer class="bg-pink-funky text-white border-t-4 border-black py-8">
+    <footer class="bg-pink-funky text-white border-t-4 border-black py-8 mt-16">
         <div class="container mx-auto px-6 text-center">
             <a href="index.html">
                 <img src="https://static.wixstatic.com/media/43bd37_09f2574505d74b639db181895d6f7d99~mv2.png" alt="Tito's Taco Stand Logo" class="w-[250px] h-auto mx-auto mb-8">
