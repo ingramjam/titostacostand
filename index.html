@@ -15,6 +15,7 @@
         body {
             font-family: 'Special Elite', monospace;
             background-color: #F3EFEA; /* Sun-bleached paper */
+            overflow-x: hidden; /* Prevent horizontal scroll from skewed elements */
         }
         .font-brand {
             font-family: 'Permanent Marker', cursive;
@@ -56,53 +57,64 @@
         .skew-section {
             transform: rotate(-2deg);
         }
-        .skew-section-opposite {
-            transform: rotate(2deg);
-        }
         
-        /* --- New TV Scene Styles --- */
+        /* --- Reworked TV Scene Styles --- */
+        .tv-scene-section {
+            /* This is a full-bleed section */
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
         .tv-scene-container {
             position: relative;
             width: 100%;
-            max-width: 1024px; /* Match image width for best results */
+            max-width: none; /* Override any max-width */
             margin: auto;
+            aspect-ratio: 1024 / 683;
         }
-        .tv-scene-container .background-image {
-            width: 100%;
-            height: auto;
-        }
-        .video-wrapper {
+
+        .tv-scene-container .video-embed {
             position: absolute;
-            /* Fine-tuned position to fit the screen in the image */
             top: 21.3%;
             left: 29.1%;
             width: 42.2%;
-            padding-top: 42.2%; /* Creates a square aspect ratio */
+            height: 56.5%; 
             overflow: hidden;
-            border-radius: 3% / 4%; /* Matches the slight curve of the CRT screen */
         }
-        .video-wrapper::after {
+
+        .tv-scene-container .video-embed::after {
             content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://static.wixstatic.com/media/43bd37_957b028904c64d2c95df025e21af959c~mv2.png');
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: 2; /* Position it above the video but below the TV frame if needed */
+        }
+
+
+        .tv-scene-container .video-embed iframe {
+            /* Reworked to perfectly fill and cover the container */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 178%; /* 16:9 aspect ratio, wider than container */
+            height: 100%;
+            transform: translate(-50%, -50%);
+            max-width: none;
+        }
+
+        .tv-scene-container .tv-overlay-image {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            /* Soft mask/shadow effect from the TV frame */
-            box-shadow: inset 0 0 20px 10px rgba(0,0,0,0.7);
-            /* Subtle scanline overlay */
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
-            background-size: 100% 4px;
-            pointer-events: none; /* So you can still click the video */
-            border-radius: inherit; /* Match the screen curve */
-        }
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 177.78%; /* Scales up 16:9 video to fill the height */
-            height: 100%;
-            transform: translateX(-50%);
+            pointer-events: none;
+            z-index: 5; /* Ensure it's on top */
         }
         
         /* --- Simplified Sticky Header --- */
@@ -223,22 +235,18 @@
         </section>
 
         <!-- CRT TV Section with Scene -->
-        <section id="crt" class="py-24 bg-black/80 skew-section-opposite">
-            <div class="container mx-auto px-6 text-center transform -rotate-2">
+        <section id="crt" class="pt-24 pb-12 bg-black">
+            <div class="container mx-auto px-6 text-center">
                 <h2 class="font-brand text-5xl md:text-6xl mb-8 text-white">FROM THE TUBE</h2>
-                <div class="tv-scene-container">
-                    <img src="https://static.wixstatic.com/media/43bd37_bf370386d06c4db5802bb373dbcb9e86~mv2.png" alt="Tacos, surfboards and a vintage TV on a counter" class="background-image">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/2cDZYuTVpbg?si=_j8HENVYvmoTKj1b&autoplay=1&mute=1&loop=1&playlist=2cDZYuTVpbg&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
             </div>
-        </section>
-        
-    </main>
-
-    <!-- Footer -->
+            <div class="tv-scene-section">
+                <div class="tv-scene-container">
+                    <!-- Layer 1: Video (bottom layer) -->
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/2cDZYuTVpbg?si=_j8HENVYvmoTKj1b&autoplay=1&loop=1&playlist=2cDZYuTVpbg&controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
+                    <!-- Layer 2: TV Frame Overlay (top layer) -->
+                    <img src="https://static.wixstatic.com/media/43bd37_bf370386d06c4db5802bb373dbcb9e86~mv2.png" alt="Vintage TV frame overlay" class="tv-overlay-image">
                 </div>
             </div>
         </section>
@@ -271,6 +279,5 @@
 
 </body>
 </html>
-
 
 
