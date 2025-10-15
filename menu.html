@@ -3,200 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Tito's Taco Stand</title>
+    <title>Tito's Taco Stand - Full Menu</title>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Fonts --><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Special+Elite&display=swap" rel="stylesheet">
     
-    <!-- Custom Styles -->
-    <style>
+    <!-- Custom Styles --><style>
         body {
             font-family: 'Special Elite', monospace;
             background-color: #F3EFEA; /* Sun-bleached paper */
-            background-image: url('https://www.transparenttextures.com/patterns/noise.png');
         }
         .font-brand {
             font-family: 'Permanent Marker', cursive;
         }
-        .bg-teal-funky { 
-            background-color: #0d9488; /* teal-600 */
-            background-image: url('https://www.transparenttextures.com/patterns/noise.png');
-        }
-        .bg-pink-funky { 
-            background-color: #db2777; /* pink-600 */
-            background-image: url('https://www.transparenttextures.com/patterns/noise.png');
-        }
-        .menu-item-title {
-            font-family: 'Permanent Marker', cursive;
-        }
+        .bg-teal-funky { background-color: #0d9488; }
+        .bg-pink-funky { background-color: #db2777; }
     </style>
 </head>
 <body class="text-black">
 
-    <!-- Header -->
-    <header class="bg-white border-b-4 border-black sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="index.html">
-                <img src="https://static.wixstatic.com/media/43bd37_09f2574505d74b639db181895d6f7d99~mv2.png" alt="Tito's Taco Stand Logo" class="h-16 md:h-20 w-auto">
+    <!-- Header --><header class="py-8">
+        <div class="container mx-auto px-6 text-center">
+            <a href="titostand.com.html">
+                <img src="https://static.wixstatic.com/media/43bd37_09f2574505d74b639db181895d6f7d99~mv2.png" alt="Tito's Taco Stand Logo" class="w-[250px] h-auto mx-auto drop-shadow-lg">
             </a>
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 lg:space-x-8 items-center">
-                <a href="index.html" class="font-bold hover:text-pink-600 transition-colors duration-300">HOME</a>
-                <a href="index.html#locations" class="font-bold hover:text-teal-600 transition-colors duration-300">LOCATIONS</a>
-                <a href="#" class="font-bold hover:text-pink-600 transition-colors duration-300">CATERING</a>
-                <a href="menu.html" class="font-bold bg-yellow-400 text-black py-2 px-4 rounded-md border-2 border-black">
-                    MENU
-                </a>
-            </nav>
-             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md bg-white border-2 border-black">
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-         <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="hidden md:hidden p-4 space-y-4 text-lg text-center bg-white border-t-2 border-black">
-            <a href="index.html" class="block font-bold hover:text-pink-600">HOME</a>
-            <a href="index.html#locations" class="block font-bold hover:text-teal-600">LOCATIONS</a>
-            <a href="#" class="block font-bold hover:text-pink-600">CATERING</a>
-            <a href="menu.html" class="block bg-yellow-400 text-black font-bold py-2 px-4 rounded-md mt-2 border-2 border-black">
-                MENU
-            </a>
+            <h1 class="font-brand text-6xl md:text-7xl mt-4">THE GRINDS</h1>
+            <p class="mt-2 text-lg">The full rundown of our righteous eats.</p>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12 md:py-24">
+    <!-- Main Menu Content --><main class="py-16">
+        <div class="container mx-auto px-6 max-w-4xl">
 
-        <h1 class="font-brand text-6xl md:text-8xl text-center mb-12">THE GRINDS</h1>
-
-        <!-- Menu Grid -->
-        <div class="space-y-12">
-
-            <!-- Burritos Section -->
-            <div>
-                <h2 class="font-brand text-5xl md:text-6xl text-pink-600 mb-6">Burritos</h2>
-                <div class="grid md:grid-cols-2 gap-x-10 gap-y-6 text-lg">
-                    <div class="border-b-2 border-dashed border-black pb-2">
-                        <h3 class="menu-item-title text-2xl">THE CALIFORNIA</h3>
-                        <p>Carne asada, french fries, cheese, crema, guac. The legend.</p>
+            <!-- Section: Burritos -->
+            <section id="burritos">
+                <h2 class="font-brand text-5xl text-center mb-8 border-b-4 border-dashed border-black pb-4">BURRITOS</h2>
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-6 text-lg">
+                    <div>
+                        <h3 class="font-brand text-2xl">CARNE ASADA BURRITO</h3>
+                        <p>Marinated steak, fresh guac, pico, cheese. The undisputed champ.</p>
                     </div>
-                    <div class="border-b-2 border-dashed border-black pb-2">
-                        <h3 class="menu-item-title text-2xl">CARNE ASADA</h3>
-                        <p>Marinated steak, fresh guac, pico de gallo. Undisputed champ.</p>
+                    <div>
+                        <h3 class="font-brand text-2xl">THE CALIFORNIA</h3>
+                        <p>The legend. Carne asada, cheese, crema, and french fries. Yup, fries.</p>
                     </div>
-                    <div class="border-b-2 border-dashed border-black pb-2">
-                        <h3 class="menu-item-title text-2xl">POLLO ASADO</h3>
-                        <p>Grilled marinated chicken, rice, beans, and pico de gallo.</p>
+                    <div>
+                        <h3 class="font-brand text-2xl">POLLO ASADO</h3>
+                        <p>Grilled chicken, guac, pico, and a blend of cheeses.</p>
                     </div>
-                    <div class="border-b-2 border-dashed border-black pb-2">
-                        <h3 class="menu-item-title text-2xl">BAJA FISH</h3>
-                        <p>Battered fish, cabbage, pico de gallo, and signature crema.</p>
+                    <div>
+                        <h3 class="font-brand text-2xl">SHREDDED BEEF</h3>
+                        <p>Slow-cooked beef, seasoned to perfection, with cheese and beans.</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Tacos Section -->
-            <div>
-                <h2 class="font-brand text-5xl md:text-6xl text-teal-600 mb-6">Tacos</h2>
-                 <div class="grid md:grid-cols-2 gap-x-10 gap-y-6 text-lg">
-                    <div class="border-b-2 border-dashed border-black pb-2">
-                        <h3 class="menu-item-title text-2xl">BAJA FISH (EACH)</h3>
-                        <p>Crispy battered fish, cabbage, signature crema. A taste of the coast.</p>
+            <!-- Section: Tacos -->
+            <section id="tacos" class="mt-16">
+                <h2 class="font-brand text-5xl text-center mb-8 border-b-4 border-dashed border-black pb-4">TACOS</h2>
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-6 text-lg">
+                    <div>
+                        <h3 class="font-brand text-2xl">BAJA FISH TACO</h3>
+                        <p>Crispy battered fish, cabbage, signature crema, and a squeeze of lime.</p>
                     </div>
-                    <div class="border-b-2 border-dashed border-black pb-2">
-                        <h3 class="menu-item-title text-2xl">CARNE ASADA (EACH)</h3>
-                        <p>Marinated steak, guac, onions, and cilantro. The classic.</p>
+                    <div>
+                        <h3 class="font-brand text-2xl">CARNE ASADA TACO</h3>
+                        <p>Served street style with cilantro, onions, and a side of salsa.</p>
                     </div>
-                    <div class="border-b-2 border-dashed border-black pb-2">
-                        <h3 class="menu-item-title text-2xl">AL PASTOR (EACH)</h3>
-                        <p>Marinated pork, pineapple, onions, and cilantro.</p>
+                    <div>
+                        <h3 class="font-brand text-2xl">GRILLED SHRIMP</h3>
+                        <p>Seasoned shrimp, melted cheese, and a chipotle crema.</p>
                     </div>
-                     <div class="border-b-2 border-dashed border-black pb-2">
-                        <h3 class="menu-item-title text-2xl">CARNITAS (EACH)</h3>
-                        <p>Slow-cooked pork, guac, and pico de gallo.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Sides & Drinks -->
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="font-brand text-5xl md:text-6xl text-pink-600 mb-6">Sides</h2>
-                     <div class="space-y-4 text-lg">
-                        <div class="border-b-2 border-dashed border-black pb-2">
-                            <h3 class="menu-item-title text-2xl">CHIPS & GUAC</h3>
-                        </div>
-                        <div class="border-b-2 border-dashed border-black pb-2">
-                            <h3 class="menu-item-title text-2xl">LOADED FRIES</h3>
-                            <p>Carne asada, guac, crema, and cheese over a bed of fries.</p>
-                        </div>
+                     <div>
+                        <h3 class="font-brand text-2xl">AL PASTOR</h3>
+                        <p>Marinated pork, pineapple, cilantro, and onions.</p>
                     </div>
                 </div>
-                <div>
-                    <h2 class="font-brand text-5xl md:text-6xl text-teal-600 mb-6">Drinks</h2>
-                    <div class="space-y-4 text-lg">
-                        <div class="border-b-2 border-dashed border-black pb-2">
-                            <h3 class="menu-item-title text-2xl">MEXICAN COKE</h3>
-                        </div>
-                        <div class="border-b-2 border-dashed border-black pb-2">
-                            <h3 class="menu-item-title text-2xl">JARRITOS</h3>
-                            <p>Mandarin, Lime, Pineapple, Tamarind</p>
-                        </div>
-                         <div class="border-b-2 border-dashed border-black pb-2">
-                            <h3 class="menu-item-title text-2xl">HORCHATA</h3>
-                        </div>
+            </section>
+
+            <!-- Section: Sides & Drinks -->
+            <section id="extras" class="mt-16">
+                <h2 class="font-brand text-5xl text-center mb-8 border-b-4 border-dashed border-black pb-4">SIDES & DRINKS</h2>
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-6 text-lg">
+                    <div>
+                        <h3 class="font-brand text-2xl">CHIPS & GUAC</h3>
+                        <p>Made fresh daily. Can't go wrong.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-brand text-2xl">LOADED FRIES</h3>
+                        <p>Carne asada, cheese, guac, and crema on a bed of fries.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-brand text-2xl">MEXICAN COKE</h3>
+                        <p>The real deal, in a glass bottle.</p>
+                    </div>
+                     <div>
+                        <h3 class="font-brand text-2xl">AGUA FRESCAS</h3>
+                        <p>Horchata or Jamaica. So refreshing.</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
         </div>
-
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-pink-funky text-white border-t-4 border-black py-8 mt-16">
+    <!-- Footer --><footer class="bg-pink-funky text-white border-t-4 border-black py-8">
         <div class="container mx-auto px-6 text-center">
-            <a href="index.html">
-                <img src="https://static.wixstatic.com/media/43bd37_09f2574505d74b639db181895d6f7d99~mv2.png" alt="Tito's Taco Stand Logo" class="w-[250px] h-auto mx-auto mb-8">
-            </a>
-            <h3 class="font-brand text-3xl">FOLLOW US!</h3>
-            <div class="flex justify-center space-x-6 mt-4">
-                <a href="#" aria-label="Facebook">
-                    <svg class="w-8 h-8 hover:opacity-80 transition-opacity" fill="currentColor" viewBox="0 0 24 24" >
-                        <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
-                    </svg>
+             <img src="https://static.wixstatic.com/media/43bd37_09f2574505d74b639db181895d6f7d99~mv2.png" alt="Tito's Taco Stand Logo" class="w-[250px] h-auto mx-auto mb-4">
+            <p class="font-brand text-xl">Tito's Taco Stand</p>
+            <p class="mt-2">The Original Cali Burritos & Tacos</p>
+            
+            <!-- Social Icons -->
+            <div class="flex justify-center space-x-6 mt-6">
+                <a href="#" class="hover:opacity-75 transition-opacity">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
                 </a>
-                <a href="#" aria-label="Instagram">
-                    <svg class="w-8 h-8 hover:opacity-80 transition-opacity" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058-1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.359 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.359-.2 6.78-2.618 6.98-6.98.058-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.359-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
+                <a href="#" class="hover:opacity-75 transition-opacity">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 8.118c-2.136 0-3.862 1.726-3.862 3.862s1.726 3.862 3.862 3.862 3.862-1.726 3.862-3.862S14.136 8.118 12 8.118zM12 14.26a2.26 2.26 0 110-4.52 2.26 2.26 0 010 4.52zm5.885-6.162a.962.962 0 100-1.925.962.962 0 000 1.925z" clip-rule="evenodd"/></svg>
                 </a>
-                <a href="#" aria-label="TikTok">
-                     <svg class="w-8 h-8 hover:opacity-80 transition-opacity" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-2.43.05-4.86-.95-6.69-2.81-1.75-1.76-2.81-4.15-2.81-6.69 0-2.54 1.06-4.93 2.81-6.69 1.83-1.85 4.25-2.81 6.69-2.81.03.01 0 3.21 0 3.21.02-1.38-.63-2.67-1.75-3.64-1.11-1.02-2.5-1.56-3.9-1.66.03-2.91-.01-5.82.02-8.73z"/>
-                    </svg>
+                <a href="#" class="hover:opacity-75 transition-opacity">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg>
                 </a>
             </div>
+
             <p class="text-sm mt-6">&copy; 1986 - 2025 Tito's Taco Stand. Stay righteous.</p>
         </div>
     </footer>
-    
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-   </script>
 
 </body>
 </html>
